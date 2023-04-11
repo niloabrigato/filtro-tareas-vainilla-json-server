@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="stylesheet" href="css/style.css">    
+    <title>Tabla de tareas</title>
+
+  </head>
+  <body>
+    <h1>Tabla de tareas</h1>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <select name="search_opt" id="search_opt">
+        <option value="0">ID</option>
+        <option value="1">Título</option>
+        <option value="2">Descripción</option>
+        <option value="3">Asignado a</option>
+        <option value="4">Prioridad</option>
+        <option value="5">Bloqueado</option>
+        <option value="6">Fecha TODO</option>
+        <option value="7">Fecha IN PROGRESS</option>
+        <option value="8">Fecha DONE</option>
+        <option value="9">Estado</option>	
+    </select>
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th>Asignado a</th>
+          <th>Prioridad</th>
+          <th>Bloqueado</th>
+          <th>Fecha de TODO</th>
+          <th>Fecha de IN PROGRESS</th>
+          <th>Fecha de DONE</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
