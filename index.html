@@ -7,6 +7,9 @@
   </head>
   <body>
     <h1>Tabla de tareas</h1>
+    <p>Ejecutar: json-server --watch db.json</p>
+    <p>CRUD - peticiones.http</p>
+
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
     <select name="search_opt" id="search_opt">
         <option value="0">ID</option>
@@ -33,6 +36,7 @@
           <th>Fecha de IN PROGRESS</th>
           <th>Fecha de DONE</th>
           <th>Estado</th>
+          <th>Destalles</th>
         </tr>
       </thead>
       <tbody id="table-body"></tbody>

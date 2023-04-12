@@ -1,0 +1,65 @@
+# PETICION GET DE TODAS LAS TAREAS
+##########################
+
+get http://localhost:3000/issues
+
+# PETICION GET DE UNA TAREA
+##########################
+
+get http://localhost:3000/issues/P5005265
+
+# CREACION DE UNA TAREA
+##########################
+
+post http://localhost:3000/issues HTTP/1.1
+content-type: application/json
+
+{
+    "id": "2",
+    "title": "MBF - BMR - autoit",
+    "description": "falla segundo login",
+    "asignated": "Matias",
+    "priority": "ALTA",
+    "blocked": null,
+    "todoDate": "12 abr 2023, 16:20",
+    "inProgressDate": null,
+    "doneDate": null,
+    "state": "Pendiente",
+    "comments": [
+      {
+        "commentDate": "12 abr 2023, 16:20",
+        "comment": "Desde tecno me idican que hay avances"
+      }
+    ]
+  }
+
+# MODIFICAION DE UNA TAREA
+##########################
+
+put http://localhost:3000/issues/1 HTTP/1.1
+content-type: application/json
+
+{
+  "id": "1",
+  "title": "MBF: regeneracoin pbd",
+  "description": "analsis porque falla regeneracion",
+  "asignated": "Matias",
+  "priority": "ALTA",
+  "blocked": "eCompileEntryRegenerate",
+  "todoDate": "11 abr 2023, 09:30",
+  "inProgressDate": "11 abr 2023, 09:30",
+  "doneDate": null,
+  "state": "En progreso",
+  "comments": [
+    {
+      "commentDate": "12 abr 2023, 13:20",
+      "comment": "por mail con research"
+    }
+  ]
+}
+
+# ELIMINACION DE UNA TAREA
+##########################
+
+delete http://localhost:3000/issues/1 HTTP/1.1
+  
